@@ -23,5 +23,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 15,
     backgroundColor: '#fff',
+    fontFamily: 'google-sans'
   },
 });

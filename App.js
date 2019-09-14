@@ -51,7 +51,8 @@ async function loadResourcesAsync() {
       ...Ionicons.font,
       // We include SpaceMono because we use it in HomeScreen.js. Feel free to
       // remove this if you are not using it in your app
-      'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf')
+      'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+      'google-sans': require('./assets/fonts/GoogleSans/GoogleSans-Regular.ttf')
     })
   ]);
 }
@@ -69,6 +70,7 @@ function handleFinishLoading(setLoadingComplete) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
+    fontFamily: 'google-sans'
   }
 });

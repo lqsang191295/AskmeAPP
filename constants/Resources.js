@@ -1,5 +1,5 @@
 const Resources = {
-  defaultAvatar: require('../assets/images/askme/default-avatar.png'),
+  defaultAvatar: require('../assets/images/app/default-avatar.png'),
   blockedIcon: require('../assets/images/askme/app/blocked.png'),
   settingIcon: require('../assets/images/askme/app/setting-icon.svg'),
   backWhiteIcon: require('../assets/images/askme/app/back-white-icon.svg'),
