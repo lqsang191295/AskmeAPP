@@ -1,4 +1,4 @@
-import startReactApp from '../index';
+import startReactApp from '../aaa.js.bak';
 
 /**
  * @class AppInitiator

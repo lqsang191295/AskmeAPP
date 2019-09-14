@@ -1,6 +1,7 @@
 import axios from 'axios';
-import { DEFAULT_LOCALE, SUPPORTED_LANGUAGES } from '~/constants/languages.constants';
-import { getLanguageLocaleCode, setLanguageLocaleCode } from '~/helpers/Language/Language';
+import { DEFAULT_LOCALE, SUPPORTED_LANGUAGES } from '../constants/languages.constants';
+// import { getLanguageLocaleCode, setLanguageLocaleCode } from '../helpers/Language/Language';
+import { AsyncStorage as localStorage } from 'react-native';
 
 export const getExtraData = () => {
   const extraData =
@@ -28,28 +29,28 @@ export const getSubdomain = () => {
   return host.replace(noProtocolUrl, '').replace('.', '');
 };
 
-export const getCountryCode = async () => {
-  try {
-    if (getLanguageLocaleCode()) return null;
-    const data = await axios.get(window.askMe.config.urlDetectLanguage);
-    const code = data && data.data ? data.data.country_code : '';
-    return code || DEFAULT_LOCALE;
-  } catch (e) {
-    return e;
-  }
-};
+// export const getCountryCode = async () => {
+//   try {
+//     if (getLanguageLocaleCode()) return null;
+//     const data = await axios.get(window.askMe.config.urlDetectLanguage);
+//     const code = data && data.data ? data.data.country_code : '';
+//     return code || DEFAULT_LOCALE;
+//   } catch (e) {
+//     return e;
+//   }
+// };
 
-export const getLanguageCode = (countryCode = DEFAULT_LOCALE) => {
-  try {
-    const result =
-      SUPPORTED_LANGUAGES.find(e => e.countryCode.indexOf(countryCode) !== -1) ||
-      SUPPORTED_LANGUAGES[1];
-    setLanguageLocaleCode(result.code);
-    return result.code;
-  } catch (e) {
-    return e;
-  }
-};
+// export const getLanguageCode = (countryCode = DEFAULT_LOCALE) => {
+//   try {
+//     const result =
+//       SUPPORTED_LANGUAGES.find(e => e.countryCode.indexOf(countryCode) !== -1) ||
+//       SUPPORTED_LANGUAGES[1];
+//     setLanguageLocaleCode(result.code);
+//     return result.code;
+//   } catch (e) {
+//     return e;
+//   }
+// };
 
 export const handleLoginWithFB = () => {
   const { appId, fbLoginCallbackUrl } = window.askMe.config;
@@ -65,7 +66,7 @@ export const handleLoginWithFB = () => {
 };
 
 export const Storage = {
-  get: key => localStorage.getItem(key),
+  get: async key => await localStorage.getItem(key),
   set: (key, value) => {
     localStorage.setItem(key, value);
   },

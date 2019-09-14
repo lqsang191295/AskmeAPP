@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Google Sans';
+    src: url('GoogleSans-Regular.eot');
+    src: local('Google Sans Regular'), local('GoogleSans-Regular'),
+        url('GoogleSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('GoogleSans-Regular.woff2') format('woff2'),
+        url('GoogleSans-Regular.woff') format('woff'),
+        url('GoogleSans-Regular.ttf') format('truetype'),
+        url('GoogleSans-Regular.svg#GoogleSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

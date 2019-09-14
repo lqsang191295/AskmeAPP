@@ -9,7 +9,8 @@ import { Provider } from 'react-redux';
 import initState from './utils/stateInitiator';
 import initServerEvents from './routers/EventHandler';
 import configureStore from './store/configureStore';
-import AppRouter from './routers/AppRouter';
+import AppNavigator from "./navigation/AppNavigator";
+// import AppRouter from './routers/AppRouter';
 // import AppNavigator from './navigation/AppNavigator';
 
 
@@ -32,8 +33,7 @@ export default function App(props) {
       <Provider store={store}>
         <View style={styles.container}>
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-          {/*<AppNavigator />*/}
-          <AppRouter />
+          <AppNavigator />
         </View>
       </Provider>
     );

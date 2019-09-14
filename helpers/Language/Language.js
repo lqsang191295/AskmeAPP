@@ -1,4 +1,4 @@
-import Cookies from '~/utils/Cookie';
+import {Storage as Cookies} from '../../utils/Common';
 
 const PREFIX = 'askme_stg_g_language_code';
 

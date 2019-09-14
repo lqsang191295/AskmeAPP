@@ -1,10 +1,10 @@
 import FlowController from './FlowController';
-import { isUserLoggedIn } from '~/routers/AppRouter';
 import history from '~/routers/history';
 import routeHelpers from '~/routers/helpers';
 import authenticationActions from '~/actions/User/authentication.actions';
 import { customShareActions } from '~/actions/customShare.actions';
 import { subscribePrivateChannel } from '~/routers/EventHandler';
+import UserUtils from "../../utils/User";
 
 class ShareFlowController extends FlowController {
   static flowType = 'sharing';
@@ -35,7 +35,7 @@ class ShareFlowController extends FlowController {
       }
 
       case 'checkAuthenticate': {
-        if (isUserLoggedIn()) {
+        if (UserUtils.isLoggedIn()) {
           super.nextStep();
           await this.run();
           break;

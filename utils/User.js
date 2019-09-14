@@ -82,6 +82,8 @@ const remove = () => {
   });
 };
 
+const isLoggedIn = () => !!getToken();
+
 const UserUtils = {
   setToken,
   getToken,
@@ -92,7 +94,8 @@ const UserUtils = {
   remove,
   setLocationState,
   getLocationState,
-  removeLocationState
+  removeLocationState,
+  isLoggedIn
 };
 
 export default UserUtils;

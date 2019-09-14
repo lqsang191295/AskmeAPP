@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
-import { NavLink } from 'react-router-dom';
-import * as Sentry from '@sentry/browser';
-import Resources from '~/constants/Resources';
+import { View } from 'react-native';
+// import { NavLink } from 'react-router-dom';
+// import * as Sentry from '@sentry/browser';
+// import Resources from '~/constants/Resources';
 
 class ErrorBoundary extends PureComponent {
   constructor(props) {
@@ -13,29 +14,29 @@ class ErrorBoundary extends PureComponent {
   }
 
   componentDidCatch(error, info) {
-    const { disabled } = window.askMe.config.sentry;
-    if (disabled) return;
-
-    // You can also log the error to an error reporting service
-    Sentry.withScope(scope => {
-      scope.setExtra('info', info);
-      scope.setExtra('state', window.getState());
-      Sentry.captureException(error);
-    });
-
-    let errorMessage = '';
-    if (window.askMe.config.env !== 'production') {
-      errorMessage = error ? JSON.stringify(error) : '';
-    }
-    this.setState(() => ({
-      hasError: true,
-      errorMessage
-    }));
-
-    const { url } = window.askMe.config;
-    if (window.askMe.config.env === 'production') {
-      window.location.href = `${url}/404?error_code=500`;
-    }
+    // const { disabled } = window.askMe.config.sentry;
+    // if (disabled) return;
+    //
+    // // You can also log the error to an error reporting service
+    // Sentry.withScope(scope => {
+    //   scope.setExtra('info', info);
+    //   scope.setExtra('state', window.getState());
+    //   Sentry.captureException(error);
+    // });
+    //
+    // let errorMessage = '';
+    // if (window.askMe.config.env !== 'production') {
+    //   errorMessage = error ? JSON.stringify(error) : '';
+    // }
+    // this.setState(() => ({
+    //   hasError: true,
+    //   errorMessage
+    // }));
+    //
+    // const { url } = window.askMe.config;
+    // if (window.askMe.config.env === 'production') {
+    //   window.location.href = `${url}/404?error_code=500`;
+    // }
   }
 
   render() {
@@ -47,7 +48,7 @@ class ErrorBoundary extends PureComponent {
     };
 
     if (hasError) {
-      return <div style={divStyle}>{errorMessage}</div>;
+      return <View style={divStyle}>{errorMessage}</View>;
     }
 
     return props.children;

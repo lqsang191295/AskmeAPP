@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'SVN-Product Sans';
+    src: url('SVN-ProductSansBold.eot');
+    src: local('SVN-Product Sans Bold'), local('SVN-ProductSansBold'),
+        url('SVN-ProductSansBold.eot?#iefix') format('embedded-opentype'),
+        url('SVN-ProductSansBold.woff2') format('woff2'),
+        url('SVN-ProductSansBold.woff') format('woff'),
+        url('SVN-ProductSansBold.ttf') format('truetype'),
+        url('SVN-ProductSansBold.svg#SVN-ProductSansBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Product Sans';
+    src: url('SVN-ProductSans.eot');
+    src: local('SVN-Product Sans'), local('SVN-ProductSans'),
+        url('SVN-ProductSans.eot?#iefix') format('embedded-opentype'),
+        url('SVN-ProductSans.woff2') format('woff2'),
+        url('SVN-ProductSans.woff') format('woff'),
+        url('SVN-ProductSans.ttf') format('truetype'),
+        url('SVN-ProductSans.svg#SVN-ProductSans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Product Sans';
+    src: url('SVN-ProductSansBoldItalic.eot');
+    src: local('SVN-Product Sans Bold Italic'), local('SVN-ProductSansBoldItalic'),
+        url('SVN-ProductSansBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('SVN-ProductSansBoldItalic.woff2') format('woff2'),
+        url('SVN-ProductSansBoldItalic.woff') format('woff'),
+        url('SVN-ProductSansBoldItalic.ttf') format('truetype'),
+        url('SVN-ProductSansBoldItalic.svg#SVN-ProductSansBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SVN-Product Sans';
+    src: url('SVN-ProductSansItalic.eot');
+    src: local('SVN-Product Sans Italic'), local('SVN-ProductSansItalic'),
+        url('SVN-ProductSansItalic.eot?#iefix') format('embedded-opentype'),
+        url('SVN-ProductSansItalic.woff2') format('woff2'),
+        url('SVN-ProductSansItalic.woff') format('woff'),
+        url('SVN-ProductSansItalic.ttf') format('truetype'),
+        url('SVN-ProductSansItalic.svg#SVN-ProductSansItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+

@@ -1,9 +1,9 @@
 import FlowController from './FlowController';
 import askingActions from '~/actions/asking.actions';
-import { isUserLoggedIn } from '~/routers/AppRouter';
 import history from '~/routers/history';
 import routeHelpers from '~/routers/helpers';
 import authenticationActions from '~/actions/User/authentication.actions';
+import UserUtils from "../../utils/User";
 
 class QuestioningFlowController extends FlowController {
   static flowType = 'questioning';
@@ -42,7 +42,7 @@ class QuestioningFlowController extends FlowController {
       }
 
       case 'checkAuthenticate': {
-        if (isUserLoggedIn()) {
+        if (UserUtils.isLoggedIn()) {
           super.nextStep();
           await this.run();
           break;
@@ -58,7 +58,7 @@ class QuestioningFlowController extends FlowController {
       }
 
       case 'login': {
-        if (isUserLoggedIn()) {
+        if (UserUtils.isLoggedIn()) {
           super.nextStep();
           await this.run();
           break;
